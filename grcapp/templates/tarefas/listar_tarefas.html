@@ -1,0 +1,10 @@
+<!-- grcapp/templates/tarefas/listar_tarefas.html -->
+
+<h1>Lista de Tarefas</h1>
+<ul>
+    {% for tarefa in tarefas %}
+        <li>{{ tarefa.titulo }} - {{ tarefa.descricao }} - Concluída: {% if tarefa.data_conclusao %} Sim {% else %} Não {% endif %}</li>
+    {% endfor %}
+</ul>
+<a href="{% url 'criar_tarefa' %}">Criar Nova Tarefa</a>
+

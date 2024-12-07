@@ -1,0 +1,8 @@
+<!-- grcapp/templates/tarefas/criar_tarefa.html -->
+
+<h1>Criar Nova Tarefa</h1>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Criar Tarefa</button>
+</form>
