@@ -1,0 +1,42 @@
+<div 
+  class="d-flex justify-content-center vh-100 bg-light" 
+  style="align-items: flex-start; padding-top: 10%; background-image: url('https://cdn.folhape.com.br/img/pc/1100/1/dn_arquivo/2022/03/1403-arruda.jpg'); background-size: cover; background-position: center;">
+  <form 
+    #userForm="ngForm" 
+    (ngSubmit)="verificarUsuario()" 
+    class="p-4 rounded shadow-lg" 
+    style="width: 100%; max-width: 400px; background: rgba(245, 239, 239, 0.9); border: 1px solid #530b0b;">
+    <h3 class="text-center text-red mb-4">Cadastro</h3>
+    <div class="mb-3">
+      <label for="nome" class="form-label fw-bold">Nome:</label>
+      <input 
+        type="text" 
+        id="nome" 
+        class="form-control form-control-lg" 
+        [(ngModel)]="nome" 
+        name="nome" 
+        required 
+        placeholder="Digite seu nome"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="email" class="form-label fw-bold">Email:</label>
+      <input 
+        type="email" 
+        id="email" 
+        class="form-control form-control-lg" 
+        [(ngModel)]="email" 
+        name="email" 
+        required 
+        placeholder="Digite seu email"
+      />
+    </div>
+    <button 
+      type="submit" 
+      class="btn btn-primary btn-lg w-100" 
+      [disabled]="userForm.invalid"
+      style="background-color: #e30f0f;">
+      Enviar
+    </button>
+  </form>
+</div>
